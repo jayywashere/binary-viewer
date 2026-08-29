@@ -5,3 +5,12 @@ version = 4
 [[package]]
 name = "binary-viewer"
 version = "0.1.0"
+dependencies = [
+ "jstdlib",
+]
+
+[[package]]
+name = "jstdlib"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b30fa94b0e59f82bef3e67bdbeca1ecb7bf997c97fe5e0dedccd2ba7de0e74a9"

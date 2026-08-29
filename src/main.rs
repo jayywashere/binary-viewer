@@ -1,17 +1,14 @@
 mod viewer;
 
+use jstdlib::write_line;
+use jstdlib::console::*;
+
 fn main() {
-    std::fs::write(
-        "example.bin",
-        [0x48, 0x65, 0x00, 0xFF, 0x41, 0x20, 0x7F]
-    ).unwrap();
+    let filename: String = Console::input("Enter a file path: ");
     
-    let bv = viewer::BinaryViewer::from_file("example.bin")
+    let bv = viewer::BinaryViewer::from_file(&filename)
         .expect("Failed to read binary file.");
 
-    println!("HEX:");
-    println!("{}", bv.get_hex());
-
-    println!("\nASCII");
-    println!("{}", bv.get_ascii());
+    write_line!("HEX:\n{}", bv.get_hex());
+    write_line!("\n\nASCII:\n{}", bv.get_ascii());
 }

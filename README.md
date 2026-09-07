@@ -1,13 +1,42 @@
 # Binary Viewer
 
-A small Rust utility that reads a binary file and displays its contents as hexadecimal and ASCII representations.
+> a tiny Rust utility that lets me look at binary files without having to stare at raw bytes like a caveman, BYE I'M LEAVING
+
+## About
+
+ok... this is a little Rust project i made to mess around with reading binary files and displaying their contents in a way that's actually readable .. i hope... .....
+
+it reads the raw bytes from a file and shows them as both hexadecimal values and ASCII characters
+
+very simple. very tiny. very useful for learning how bytes actually work, i think.
 
 ## Features
 
-* Reads raw bytes from a file
-* Displays bytes in hexadecimal
-* Displays printable ASCII characters
-* Replaces non-printable ASCII bytes with `.`
+- reads raw bytes from a file
+- displays bytes in hexadecimal
+- displays printable ASCII characters
+- replaces non-printable bytes with `.`
+- doesn't do anything fancy because it doesn't need to (minimalistic diva attack: "don't do more than what you need to")
+
+## Requirements
+
+- Rust
+- Cargo
+
+## Installation
+
+clone the repository:
+
+```bash
+git clone <insert-repository-url-here>
+cd binary-viewer
+```
+
+then run it with Cargo:
+
+```bash
+cargo run
+```
 
 ## Example
 
@@ -19,15 +48,11 @@ ASCII:
 He..A .
 ```
 
-## Usage
-
-Place a binary file named `example.bin` in the project directory, then run:
-
-```bash
-cargo run
-```
-
 ## Built With
 
-* Rust
-* `std::fs`
+- Rust
+- `std::fs`
+
+## License
+
+See [LICENSE](LICENSE).
